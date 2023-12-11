@@ -1,0 +1,166 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt]{article}
+\usepackage{epsfig}
+\usepackage{times}
+\usepackage{amsmath}
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\bottomfraction}{1.0}
+\renewcommand{\textfraction}{0.0}
+\setlength {\textwidth}{6.6in}
+\hoffset=-1.0in
+\oddsidemargin=1.00in
+\marginparsep=0.0in
+\marginparwidth=0.0in                                               \usepackage{xcolor}                                
+\setlength {\textheight}{9.0in}
+\voffset=-1.00in
+\topmargin=1.0in
+\headheight=0.0in
+\headsep=0.00in
+\footskip=0.50in                                         
+\setcounter{page}{1}
+\begin{document}
+\def\pos{\medskip\quad}
+\def\subpos{\smallskip \qquad}
+\newfont{\nice}{cmr12 scaled 1250}
+\newfont{\name}{cmr12 scaled 1080}
+\newfont{\swell}{cmbx12 scaled 800}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     DO NOT CHANGE ANYTHING ABOVE THIS LINE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     DO NOT CHANGE ANYTHING ABOVE THIS LINE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     DO NOT CHANGE ANYTHING ABOVE THIS LINE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+{\large
+PHYSICS  20323/60323: Fall 2023 - LaTEX example 
+}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\large Project: Madeline Smit}\\\vskip0.25in
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section Heading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bullet Point & Numbered list - lists can also be nested as below
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section Heading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vskip0.1in
+
+\begin{enumerate}
+    \item \textbf{The following questions refer to stars in the Table below.}
+
+Note: There may be multiple answers.
+
+\begin{center}
+\begin{tabular}{|l|c|r|r|r|r|}\hline\hline
+Name & Mass & Luminosity  & Lifetime & Temperature & Radius \\\hline\hline $\eta$ Car.   & 60. \(M_\odot\) & $10^{6}$ \(L_\odot\) & $8.0 \times 10^{5}$ years & &  \\\hline
+$\epsilon$ Eri.   & 6.0 \(M_\odot\) & $10^{3}$ \(L_\odot\) &      & 20,000 K &   \\\hline
+$\delta$ Scu.   & 2.0 \(M_\odot\) &         & 5.0 X $10^{8}$ years & & 2 \(R_\odot\) \\\hline
+$\beta$ Cyg.   & 1.3 \(M_\odot\) & 3.5 \(L_\odot\)   & & &   \\\hline
+$\alpha$ Cen.   & 1.0 \(M_\odot\) &         & & & 1 \(R_\odot\) \\\hline
+$\gamma$ Del.   & 0.7 \(M_\odot\) & & 4.5 x $10^{10}$ years & 5000 K &  \\\hline
+\end{tabular}\vskip 0.2in
+\end{center} 
+\begin{enumerate}
+    \item (4 points) Which of these stars will produce a planetary nebula.\\
+
+\item (4 points) Elements heavier than \textit{Carbon} will be produced in the stars
+\end{enumerate}
+
+2. An electron is found to be on the spin state (in the z-basis): $\chi =   \begin{pmatrix}
+    3i\\
+    4
+    \end{pmatrix}$\\ 
+    
+
+(a) (5 points) Determine the possible values of A such that the state is normalized.\\
+
+(b) (5 points) Find the expectation values of the operators \textcolor{red}{$S_x$}, \textcolor{violet}{$S_y$}, \textcolor{orange}{$S_z$} and $\vec{S^2}$.\\
+
+
+The matrix representations in the z-basis for the components of electron spin operators are
+given by:\\
+
+\textcolor{red}{$S_x=\frac{\hbar}{2}\begin{pmatrix}
+          0 & 1\\       
+          1 & 0
+          \end{pmatrix};$} \hspace{10mm}
+\textcolor{violet}{$S_y=\frac{\hbar}{2}\begin{pmatrix}
+          0 & -i\\       
+          i & 0
+          \end{pmatrix};$} \hspace{10mm}
+\textcolor{orange}{$S_z=\frac{\hbar}{2}\begin{pmatrix}
+          1 & 0\\
+          0 & -1
+          \end{pmatrix}$}\\
+          
+3. The average electrostatic field in the earth’s atmosphere in fair weather is approximately given:
+
+⃗\begin{equation}
+            \vec{E} = E_0(Ae^{\alpha z} + Be^{-\beta z}) \hat{z},    
+\end{equation}
+              
+
+
+
+where \textit{A, B,} $\alpha$, $\beta$ are positive constants and z is the height above the (locally flat) earth surface. \\
+
+
+(a) (5 points) Find the average charge density in the atmosphere as a function of height \\
+
+
+(b) (5 points) Find the electric potential as a function height above the earth.
+
+\end{enumerate}
+
+Latex Example \hspace{135mm}31
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage % inserts a page break
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figures can be inserted
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section Heading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tables are created easily
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section Heading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{document}
