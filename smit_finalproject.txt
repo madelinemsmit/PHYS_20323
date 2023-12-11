@@ -1,0 +1,209 @@
+\documentclass[12pt]{article}
+\usepackage{epsfig}
+\usepackage{times}
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\bottomfraction}{1.0}
+\renewcommand{\textfraction}{0.0}
+\setlength {\textwidth}{6.6in}
+\hoffset=-1.0in
+\oddsidemargin=1.00in
+\marginparsep=0.0in
+\marginparwidth=0.0in  
+\usepackage{pgfplots}
+
+\setlength {\textheight}{9.0in}
+\voffset=-1.00in
+\topmargin=1.0in
+\headheight=0.0in
+\headsep=0.00in
+\footskip=0.50in                                         
+\setcounter{page}{1}
+\begin{document}
+\def\pos{\medskip\quad}
+\def\subpos{\smallskip \qquad}
+\newfont{\nice}{cmr12 scaled 1250}
+\newfont{\name}{cmr12 scaled 1080}
+\newfont{\swell}{cmbx12 scaled 800}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     DO NOT CHANGE ANYTHING ABOVE THIS LINE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     DO NOT CHANGE ANYTHING ABOVE THIS LINE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     DO NOT CHANGE ANYTHING ABOVE THIS LINE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{center}
+{\large
+PHYSICS  20323: Scientific Analysis \& Modeling - Fall 2023
+}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\large Project: Madeline Smit}\\\vskip0.25in
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section Heading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent {\bf PROJECT INFORMATION:} \\
+
+Scientific Analysis and Modeling Final Project
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section Heading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vskip0.1in
+\noindent {\bf PURPOSE:} \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bullet Point & Numbered list - lists can also be nested as below
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}      % first begin-----------]
+\item To simulate the decay process of a radioactive chain and track the transformation of isotopes over time.                \end{itemize}                       
+\begin{itemize}      %           third begin-]      
+\item To calculate and analyze the energy released from different decay processes within the chain.         %          
+ \end{itemize}        %           third end --]        %                            %                          
+\begin{itemize}      %      fourth begin ----]  
+\item To determine the thickness of shielding material needed to block $\alpha$-particle decay energy for safety.        %   \end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section Heading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vskip0.1in
+\noindent {\bf PROCEDURE:} \\
+\begin{enumerate}
+  \item \textbf{Decay Chain Simulation Setup}:
+    \begin{itemize}
+      \item Define the decay rates and times for each isotope transition based on given data.
+      \item Create a computational model to simulate the decay of 20,000 atoms through the entire chain.
+    \end{itemize}
+  
+  \item \textbf{Energy Release Calculation}:
+    \begin{itemize}
+      \item Calculate the number of atoms remaining for each isotope after decay at specific time intervals.
+      \item Compute the energy released per decay event for $\alpha$, $\beta$, R, and Z decays using relevant equations.
+      \item Accumulate and analyze the total energy released from each decay type.
+    \end{itemize}
+  
+  \item \textbf{Shielding Thickness Calculation}:
+    \begin{itemize}
+      \item Utilize the average and standard deviation of $\alpha$-particle decay energies obtained from multiple simulation runs.
+      \item Apply a safety margin (up to 3 standard deviations) to determine the maximum energy scenario.
+      \item Calculate the shielding thickness required using the given blocking capability per cm of shielding material.
+    \end{itemize}
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage % inserts a page break
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figures can be inserted
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent {\bf ANALYSIS (and math):} \\
+
+\subsection*{Decay Chain Simulation and Energy Release}
+Implemented a simulation to track decay, calculating remaining atoms and energy release from different decay processes.
+
+\subsection*{Average and Standard Deviation Calculation}
+Performed multiple simulation runs to obtain average and standard deviation of total and individual decay energies produced.
+
+\subsection*{Shielding Thickness Determination}
+Derived the shielding thickness required to block $\alpha$-particle decay energy for safety, factoring in average energy and standard deviation.
+
+\begin{equation*}
+    \text{Average Energy Released} = \frac{\sum \text{Total Energy}}{\text{Number of Runs}}
+\end{equation*}
+
+\begin{equation*}
+    \text{Standard Deviation} = \sqrt{\frac{\sum (\text{Energy} - \text{Average Energy})^2}{\text{Number of Runs}}}
+\end{equation*}
+
+\begin{equation*}
+    A_x = \int_{n-1}^{n+10} f(x) \mathrm{d}x
+\end{equation*}
+
+\begin{equation}
+    F = ma \\
+    = m \frac{dv}{dt} 
+\end{equation}
+
+\begin{equation}
+    \prod_{j\ge0}\left( \sum_{k\ge0} a_{jk}z^k \right) = \sum_{n\ge0} z^n 
+    \left( \sum_{k_0,k_1\ldots\ge0 \atop k_0+k_1\cdots=0} a_{0k_0} a_{1k_1}\ldots \right)
+\end{equation}
+\pagebreak
+\subsection*{Decay Chain Model}
+\begin{figure}[htbp]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+      xlabel={Time (minutes)},
+      ylabel={Number of Atoms},
+      legend pos=north east,
+      grid=both,
+    ]
+
+    % Given decay information
+    \addplot[blue, mark=o, smooth] coordinates {
+        (0, 20000)
+        (1, 19400)
+        (7.6, 14580.8)
+        (11.6, 10560.776)
+        (15, 7688.79792)
+        (19.14, 5973.97475056)
+        (23.91, 4613.52551847)
+        (31.1, 3605.31444617)
+        (33.24, 3168.71158928)
+        (37.01, 2612.97722957)
+        (41.78, 2153.64830436)
+    };
+    \addlegendentry{Isotope Decay};
+
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Decay of Isotopes Over Time}
+  \label{fig:isotope_decay}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section Heading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vskip0.1in
+\pagebreak
+\section*{RESULTS}
+\begin{table}[htbp]
+  \centering
+  \caption{Decay Data Table}
+  \label{tab:decay_data}
+  \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Isotope} & \textbf{Initial Quantity} & \textbf{Final Quantity} \\
+    \hline
+    219At & 20000 & 6000 \\
+    215Bi & 20000 & 3000 \\
+    211Pb & 20000 & 18000 \\
+    207Tl & 20000 & 19870 \\
+    207Pb & 20000 & 20000 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tables are created easily
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Section Heading
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{CONCLUSION}
+The simulation successfully modeled radioactive decay, providing insights into energy release and the necessary shielding thickness against $\alpha$-particle decay. Understanding these decay processes is crucial for various applications, including nuclear science and radiation protection.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{document}
